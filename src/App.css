@@ -1,0 +1,136 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+html {
+  font-family: "Cairo", sans-serif;
+  color: white;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.portfolio-container {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-color: #222222;
+  opacity: 1;
+}
+
+.wave-svg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: 37% 37%;
+  padding: 0;
+  margin: 0;
+  z-index: -1;
+  opacity: 1;
+}
+
+.page {
+  width: 100vw;
+  /* height: 100vh; */
+  min-height: 90vh;
+  margin-top: 10vh;
+}
+
+/* Font Sizes */
+
+h1 {
+  font-size: calc(42px + (60 - 42) * ((100vw - 360px) / (1920 - 360)));
+  font-weight: 100;
+}
+
+li {
+  font-size: 18px;
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 42px;
+  font-weight: 200;
+}
+
+h3 {
+  font-size: calc(24px + (32 - 24) * ((100vw - 360px) / (1920 - 360)));
+}
+
+p {
+  font-size: 24px;
+  font-weight: 200;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: 300;
+}

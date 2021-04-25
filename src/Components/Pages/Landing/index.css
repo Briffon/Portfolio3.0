@@ -1,0 +1,68 @@
+.landing-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.landing-container h1 {
+  max-width: 80%;
+  text-align: center;
+}
+
+.landing-container__icons {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  bottom: 3rem;
+}
+
+.landing-container img {
+  width: 75px;
+  margin-right: 1rem;
+}
+
+.landing-container__icons img:hover {
+  transform: scale(1.2);
+}
+
+.tsparticles-canvas-el {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.react-rotating-text-cursor {
+  animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s
+    infinite;
+}
+
+@keyframes blinking-cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

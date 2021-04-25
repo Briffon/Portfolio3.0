@@ -1,0 +1,124 @@
+import React, { useState } from "react";
+import Card from "../../Card";
+import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
+import "./index.css";
+import "./mobile.css";
+
+function About() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentCard, setCurrentCard] = useState(0);
+
+  const toggleOpen = (e, index) => {
+    e.preventDefault();
+    if (
+      document
+        .getElementsByClassName("about__container__services__cards")[0]
+        .classList.contains("close")
+    ) {
+      document
+        .getElementsByClassName("about__container__services__cards")[0]
+        .classList.remove("close");
+      setIsOpen(!isOpen);
+    } else {
+      document
+        .getElementsByClassName("about__container__services__cards")[0]
+        .classList.add("close");
+      setCurrentCard(index);
+      setIsOpen(!isOpen);
+    }
+  };
+  const Cards = [
+    {
+      name: "Design",
+      content:
+        "I design responsive modern websites that take priority in user experience. Using AdobeXD, I create the look, layout, and features that best fits the needs of my client. My process includes: building and improving websites, conceptualizing creative ideas with clients, testing and improving the design on a website, designing sample pages including colors and fonts, preparing design plans and presenting website structure, and much more. Depending on the project it takes me 2-3 weeks to create a hi fidelity web design. If you’re interested in improving your current design or starting from scratch please feel free to contact me!",
+      imgs: ["./images/icons/design.png", "./images/icons/xd.png"],
+    },
+    {
+      name: "Development",
+      content:
+        "I develop using ReactJS, this brings me the most efficient way to accomplish back-end security, render speed, high SEO score, and overall productivity. Any needs can be met such as eCommerce, portfolio, marketing, and blogging. Depending on the scope, it takes me 2-3 weeks to push a web app live.",
+      imgs: ["./images/icons/dev.png"],
+    },
+    {
+      name: "Analytics",
+      content:
+        "Being certified in google analytics, I have a strong grasp on current marketing tools and strategies. I am able to research audience preferences and discover new trends, measure web traffic and monitor SEO, suggest new ways to attract prospective customers, and many more opportunities for you to take advantage of.",
+      imgs: ["./images/icons/analytics.png"],
+    },
+  ];
+  return (
+    <div className="page about__container">
+      <div className="about__container__about-me">
+        <h2>About Me</h2>
+        <p>
+          Hello, my name is Britton Smith, I am a Full Stack Web
+          Developer/Designer from Fullsail University partnered with
+          DigitalByte.io. I make beautiful modern websites that are optimized
+          for all devices. I work with many technologies to bring my clients the
+          most efficient product for their needs. I am also certified in Google
+          Analytics so I can track and make reports of web traffic. Using this
+          tool I can develop and execute strategies for digital marketing
+          efforts. These efforts will create revenue-driving programs that build
+          relationships with clients, as well as online audiences through the
+          various digital and social media platforms. If you're interested in
+          building a new site, redesigning your current website, or growing your
+          customer market don't be afraid to contact me!
+        </p>
+      </div>
+      <div className="about__container__services">
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              layout
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="card__container__more"
+            >
+              <img
+                onClick={toggleOpen}
+                src="./images/icons/close.png"
+                alt="x"
+                className="card__container__more-close"
+              />
+              <div className="card__container__more__info">
+                <h2>{Cards[currentCard].name}</h2>
+                <p>{Cards[currentCard].content}</p>
+              </div>
+              <div className="card__container__more__imgs">
+                <img
+                  className="card__container__more-img"
+                  src={`${Cards[currentCard].imgs[0]}`}
+                  alt={`${Cards[currentCard].name} icon`}
+                />
+                <img
+                  className="card__container__more-img"
+                  src={`${Cards[currentCard].imgs[1]}`}
+                  alt={`${Cards[currentCard].name} picture`}
+                />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+        <div className="about__container__services__cards">
+          <AnimateSharedLayout>
+            {Cards.map((card, index) => {
+              return (
+                <Card
+                  name={card.name}
+                  key={index}
+                  content={card.content}
+                  image={card.imgs[0]}
+                  animate={(e) => toggleOpen(e, index)}
+                />
+              );
+            })}
+          </AnimateSharedLayout>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default About;
