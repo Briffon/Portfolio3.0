@@ -30,21 +30,20 @@ function About() {
   const Cards = [
     {
       name: "Design",
-      content:
-        "I design responsive modern websites that take priority in user experience. Using AdobeXD, I create the look, layout, and features that best fits the needs of my client. My process includes: building and improving websites, conceptualizing creative ideas with clients, testing and improving the design on a website, designing sample pages including colors and fonts, preparing design plans and presenting website structure, and much more. Depending on the project it takes me 2-3 weeks to create a hi fidelity web design. If you’re interested in improving your current design or starting from scratch please feel free to contact me!",
+      content: `I design responsive modern websites that take priority in user experience. These designs create the look, layout, and features that best fits the needs of my client. My process includes: building and improving websites, conceptualizing creative ideas with clients, testing and improving the design on a website, designing sample pages including colors and fonts, preparing design plans and presenting website structure, and much more. Depending on the project it takes me 2-3 weeks to create a hi fidelity web design. If you’re interested in improving your current design or starting from scratch please feel free to`,
       imgs: ["./images/icons/design.png", "./images/icons/xd.png"],
     },
     {
       name: "Development",
       content:
-        "I develop using ReactJS, this brings me the most efficient way to accomplish back-end security, render speed, high SEO score, and overall productivity. Any needs can be met such as eCommerce, portfolio, marketing, and blogging. Depending on the scope, it takes me 2-3 weeks to push a web app live.",
-      imgs: ["./images/icons/dev.png"],
+        "I am a full stack developer meaning I can develop both client and server software. To bring your site to life I develop front-end website architecture while designing user interactions. I develop using ReactJS, this brings me the most efficient way to accomplish back-end security, render speed, high SEO score, and overall productivity. Any needs can be met such as eCommerce, portfolio, marketing, and blogging. Using my technologies I can make strong, secure, swift and responsive web applications that meet technical and consumer needs. Depending on the scope of the project, it takes me 2-3 weeks to push a web application live. If you’re interested in building a site or recreating your current site, please feel free to",
+      imgs: ["./images/icons/web.png", "./images/icons/reactjspic.png"],
     },
     {
       name: "Analytics",
       content:
-        "Being certified in google analytics, I have a strong grasp on current marketing tools and strategies. I am able to research audience preferences and discover new trends, measure web traffic and monitor SEO, suggest new ways to attract prospective customers, and many more opportunities for you to take advantage of.",
-      imgs: ["./images/icons/analytics.png"],
+        "Being certified in google analytics, I have a strong grasp on current marketing tools and strategies. I am able to research audience preferences and discover new trends, measure web traffic and monitor SEO, suggest new ways to attract prospective customers, and many more opportunities for you to take advantage of. Connecting your website to google analytics and presenting consumer information for your site, I can give you valuable information on how to bring in more traffic to your website. If you’re interested in having a bigger presence, please feel free to",
+      imgs: ["./images/icons/analytics.png", "./images/icons/google.png"],
     },
   ];
   return (
@@ -84,7 +83,9 @@ function About() {
               />
               <div className="card__container__more__info">
                 <h2>{Cards[currentCard].name}</h2>
-                <p>{Cards[currentCard].content}</p>
+                <p>
+                  {Cards[currentCard].content} <a href="/">contact me!</a>
+                </p>
               </div>
               <div className="card__container__more__imgs">
                 <img
