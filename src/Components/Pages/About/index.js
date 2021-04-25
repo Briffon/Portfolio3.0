@@ -3,6 +3,7 @@ import Card from "../../Card";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import "./index.css";
 import "./mobile.css";
+import Technology from "../../Technology";
 
 function About() {
   const [isOpen, setIsOpen] = useState(false);
@@ -66,6 +67,7 @@ function About() {
         </p>
       </div>
       <div className="about__container__services">
+        <h2>Services</h2>
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -116,6 +118,22 @@ function About() {
               );
             })}
           </AnimateSharedLayout>
+        </div>
+      </div>
+      <div className="about__container__technologies">
+        <h2>Technologies</h2>
+        <div className="about__container__technologies-items">
+          <Technology name="Reactjs" img="./images/icons/reactjs.png" />
+          <Technology name="JavaScript" img="./images/ja.png" />
+          <Technology name="CSS" img="./images/icons/css.webp" />
+          <Technology name="HTML" img="./images/icons/html.webp" />
+          <Technology name="MySQL" img="./images/icons/mysql.png" />
+          <Technology name="Adobe XD" img="./images/icons/xd.png" />
+          <Technology name="Bootstrap" img="./images/icons/bs.jpg" />
+          <Technology name="GitHub" img="./images/icons/git.png" />
+          <Technology name="NodeJS" img="./images/icons/node.jpg" />
+          <Technology name="MongoDB" img="./images/icons/mongodb.png" />
+          <Technology name="Google Analytics" img="./images/icons/google.png" />
         </div>
       </div>
     </div>

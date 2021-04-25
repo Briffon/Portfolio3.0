@@ -18,6 +18,10 @@
   .about__container__services__cards .card__container:nth-of-type(3) {
     margin-top: 2rem;
   }
+
+  .about__container__technologies {
+    margin-top: 10rem;
+  }
 }
 
 @media (max-width: 850px) {
@@ -59,5 +63,11 @@
 @media (max-width: 465px) {
   .about__container__services__cards .card__container {
     width: 80% !important;
+  }
+}
+
+@media (max-width: 391px) {
+  .about__container__services {
+    margin-top: 10rem;
   }
 }
