@@ -1,19 +1,60 @@
 import React, { useState } from "react";
 import "./index.css";
 import Particles from "react-particles-js";
+import axios from "axios";
 
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const submit = (e) => {};
+  let axiosConfig = {
+    headers: {
+      "Content-Type": "application/json;charset=UTF-8",
+      "Access-Control-Allow-Origin": "*",
+    },
+  };
+
+  const submit = (e) => {
+    e.preventDefault();
+    axios
+      .post(
+        "http://localhost:5000/sendToMe",
+        { name, text: message, email, subject },
+        axiosConfig
+      )
+      .then((res) => {
+        setName("");
+        setEmail("");
+        setMessage("");
+        document.getElementById("form").reset();
+        alert("Message Sent!");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   const inputChange = (input) => {
     let field = input.target.id;
     let value = input.target.value;
-    console.log(`${field}:${value}`);
+
+    switch (field) {
+      case "name":
+        setName(value);
+        break;
+      case "email":
+        setEmail(value);
+        break;
+      case "subject":
+        setSubject(value);
+        break;
+      case "message":
+        setMessage(value);
+        break;
+    }
   };
+
   return (
     <div className="page contact__container">
       <h2>Contact Me</h2>

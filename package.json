@@ -1,0 +1,26 @@
+{
+  "name": "portfolio3.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd front-end; npm start",
+    "api": "cd back-end; npm start",
+    "dev": "concurrently \"cd front-end && npm run start\" \"cd back-end && npm run start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Briffon/Portfolio3.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "express": "^4.17.1",
+    "history": "^5.0.0",
+    "nodemailer": "^6.6.0",
+    "nodemon": "^2.0.7",
+    "react-rotating-text": "^1.4.1"
+  }
+}
