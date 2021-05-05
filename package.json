@@ -11,7 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd front-end; npm start",
     "api": "cd back-end; npm start",
-    "dev": "concurrently \"cd front-end && npm run start\" \"cd back-end && npm run start\""
+    "dev": "concurrently \"cd front-end && npm run start\" \"cd back-end && npm run start\"",
+    "heroku-postbuild": "cd font-end && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -20,11 +21,5 @@
   "author": "",
   "license": "ISC",
   "homepage": "",
-  "dependencies": {
-    "express": "^4.17.1",
-    "history": "^5.0.0",
-    "nodemailer": "^6.6.0",
-    "nodemon": "^2.0.7",
-    "react-rotating-text": "^1.4.1"
-  }
+  "dependencies": {}
 }
