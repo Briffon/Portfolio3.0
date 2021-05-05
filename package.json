@@ -13,7 +13,7 @@
     "api": "cd back-end; npm start",
     "start": "npm start --prefix backend",
     "dev": "concurrently \"cd frontend && npm run start\" \"cd back-end && npm run start\"",
-    "heroku-postbuild": "cd backend && npm run start"
+    "heroku-postbuild": "cd backend && npm install && npm run start"
   },
   "repository": {
     "type": "git",
