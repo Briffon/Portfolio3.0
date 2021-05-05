@@ -10,7 +10,7 @@ const path = require("path");
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(cors());
-const whitelist = ['http://localhost:3000'​, 'http://localhost:8080'​, 'https://git.heroku.com/bsmith-portfolio.git']
+const whitelist = ['http://localhost:3000'​, 'http://localhost:8080'​, 'https://bsmith-portfolio.herokuapp.com/']
 
 app.use("/sendToMe", require("./routes/sendToMe"));
 

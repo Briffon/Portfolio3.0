@@ -19,7 +19,7 @@ function Contact() {
     e.preventDefault();
     axios
       .post(
-        "http://localhost:5000/sendToMe",
+        "https://bsmith-portfolio.herokuapp.com/sendToMe",
         { name, text: message, email, subject },
         axiosConfig
       )
