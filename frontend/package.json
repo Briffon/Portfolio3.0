@@ -23,8 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "concurrently --raw \"npm run api\" \"npm run start\"",
-    "api": "cd ../backend; npm run start",
-    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+    "api": "cd ../backend; npm run start"
   },
   "proxy": "http://localhost:5000",
   "eslintConfig": {

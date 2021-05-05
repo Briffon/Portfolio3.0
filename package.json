@@ -9,11 +9,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd front-end; npm start",
+    "start": "cd frontend && npm run start",
     "api": "cd back-end; npm start",
-    "start": "npm start --prefix backend",
     "dev": "concurrently \"cd frontend && npm run start\" \"cd back-end && npm run start\"",
-    "heroku-postbuild": "cd frontend && npm install && npm run start"
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "repository": {
     "type": "git",
