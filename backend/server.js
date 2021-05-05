@@ -14,9 +14,9 @@ const whitelist = ['http://localhost:3000'​, 'http://localhost:8080'​, 'http
 
 app.use("/sendToMe", require("./routes/sendToMe"));
 
-app.use(express.static(path.join(__dirname, "../front-end/public")));
+app.use(express.static(path.join(__dirname, "../front-end/build")));
 app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../front-end/public", "index.html"));
+  res.sendFile(path.join(__dirname, "../front-end/build", "index.html"));
 });
 app.use((err, req, res, next) => {
   res.locals.error = err;
