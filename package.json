@@ -11,6 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd front-end; npm start",
     "api": "cd back-end; npm start",
+    "start": "npm start --prefix back-end",
     "dev": "concurrently \"cd front-end && npm run start\" \"cd back-end && npm run start\"",
     "heroku-postbuild": "cd font-end && npm install && npm run build"
   },
