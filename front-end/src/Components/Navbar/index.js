@@ -13,10 +13,10 @@ function Nav(props) {
     let mobileNav = document.getElementsByClassName("nav__mobile")[0];
     if (post >= 100) {
       if (!mobileNav.classList.contains("close")) {
-        mobileNav.style.backgroundColor = "rgba(0,0,0,0.3)";
+        mobileNav.style.backgroundColor = "rgba(0,0,0,0.75)";
       }
       if (!regularNav.classList.contains("close")) {
-        regularNav.style.backgroundColor = "rgba(0,0,0,0.3)";
+        regularNav.style.backgroundColor = "rgba(0,0,0,0.75)";
       }
     } else if (post < 100) {
       if (!mobileNav.classList.contains("close")) {

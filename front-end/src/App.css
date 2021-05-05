@@ -12,7 +12,6 @@ ol[class] {
 }
 
 html {
-  font-family: "Cairo", sans-serif;
   color: white;
 }
 
@@ -41,6 +40,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-family: "Cairo", sans-serif !important;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -103,22 +103,23 @@ select {
 /* Font Sizes */
 
 h1 {
-  font-size: calc(42px + (60 - 42) * ((100vw - 360px) / (1920 - 360)));
+  font-size: calc(42px + (72 - 42) * ((100vw - 360px) / (1920 - 360)));
   font-weight: 100;
+}
+
+h2 {
+  font-size: calc(42px + (60 - 42) * ((100vw - 360px) / (1920 - 360)));
+  font-weight: 300;
+}
+
+h3 {
+  font-size: calc(24px + (36 - 24) * ((100vw - 360px) / (1920 - 360)));
+  font-weight: 300;
 }
 
 li {
   font-size: 18px;
   font-weight: 200;
-}
-
-h2 {
-  font-size: 42px;
-  font-weight: 200;
-}
-
-h3 {
-  font-size: calc(24px + (32 - 24) * ((100vw - 360px) / (1920 - 360)));
 }
 
 p {
@@ -130,7 +131,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-h3 {
-  font-size: 36px;
-  font-weight: 300;
+.tsparticles-canvas-el {
+  position: absolute;
+  z-index: -1;
 }
