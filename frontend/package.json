@@ -23,7 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "concurrently --raw \"npm run api\" \"npm run start\"",
-    "api": "cd ../back-end; npm run start"
+    "api": "cd ../backend; npm run start"
   },
   "proxy": "http://localhost:5000",
   "eslintConfig": {
