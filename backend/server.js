@@ -1,16 +1,14 @@
 const express = require("express");
-const error = require("debug")("api:error");
 const app = express();
 require("dotenv").config();
 const morgan = require("morgan");
-const nodemailer = require("nodemailer");
 const port = process.env.PORT || 5000;
 const cors = require("cors");
 const path = require("path");
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(cors());
-const whitelist = ['http://localhost:3000'​, 'http://localhost:8080'​, 'https://portfoliobsmith.herokuapp.com/']
+const whitelist = ["https://portfoliobsmith.herokuapp.com/"];
 
 app.use("/sendToMe", require("./routes/sendToMe"));
 

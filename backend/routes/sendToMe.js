@@ -28,7 +28,7 @@ sendToMeRouter.post("/", (req, res, next) => {
   //make mailable object
   const mail = {
     from: req.body.email,
-    to: "briffon999@gmail.com",
+    to: process.env.THE_EMAIL,
     subject: req.body.subject,
     text: `
       from:
