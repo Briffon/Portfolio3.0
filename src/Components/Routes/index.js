@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import About from "../Pages/About";
 import Landing from "../Pages/Landing";
+import Portfolio from "../Pages/Portfolio";
 
 const Routes = () => {
   return (
@@ -11,6 +12,9 @@ const Routes = () => {
       </Switch>
       <Switch>
         <Route exact path="/About" component={About} />
+      </Switch>
+      <Switch>
+        <Route exact path="/Portfolio" component={Portfolio} />
       </Switch>
     </>
   );
