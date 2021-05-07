@@ -1,13 +1,18 @@
 {
   "name": "portfolio3.0",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.15.5",
+    "npm": "6.14.11"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd front-end; npm start",
+    "start": "cd frontend && npm run start",
     "api": "cd back-end; npm start",
-    "dev": "concurrently \"cd front-end && npm run start\" \"cd back-end && npm run start\""
+    "dev": "concurrently \"cd frontend && npm run start\" \"cd back-end && npm run start\"",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -16,11 +21,5 @@
   "author": "",
   "license": "ISC",
   "homepage": "",
-  "dependencies": {
-    "express": "^4.17.1",
-    "history": "^5.0.0",
-    "nodemailer": "^6.6.0",
-    "nodemon": "^2.0.7",
-    "react-rotating-text": "^1.4.1"
-  }
+  "dependencies": {}
 }
