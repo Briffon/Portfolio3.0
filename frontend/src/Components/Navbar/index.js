@@ -66,11 +66,7 @@ function Nav(props) {
       </div>
 
       <div className="nav__mobile">
-        <img
-          className="nav-container-logo"
-          src="./images/logo-white.png"
-          alt="logo"
-        />
+        <img className="nav-container-logo" src={Logo} alt="logo" />
         <div className="nav__mobile__hamburger" onClick={openMobileNav}>
           <div className="nav__mobile__hamburger-line"></div>
           <div className="nav__mobile__hamburger-line"></div>
