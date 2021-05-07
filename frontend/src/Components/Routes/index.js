@@ -4,6 +4,7 @@ import About from "../Pages/About";
 import Contact from "../Pages/Contact";
 import Landing from "../Pages/Landing";
 import Portfolio from "../Pages/Portfolio";
+import Project from "../Pages/Project";
 
 const Routes = () => {
   return (
@@ -16,6 +17,9 @@ const Routes = () => {
       </Switch>
       <Switch>
         <Route exact path="/Portfolio" component={Portfolio} />
+      </Switch>
+      <Switch>
+        <Route exact path="/Project/:id" component={Project} />
       </Switch>
       <Switch>
         <Route exact path="/Contact" component={Contact} />

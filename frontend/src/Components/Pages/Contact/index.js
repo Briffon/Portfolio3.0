@@ -52,6 +52,8 @@ function Contact() {
       case "message":
         setMessage(value);
         break;
+      default:
+        break;
     }
   };
 

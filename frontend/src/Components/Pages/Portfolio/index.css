@@ -28,8 +28,11 @@
 }
 
 .portfolio__container__pagination img {
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 50px;
+  border: 2px solid cyan;
+  padding: 0.5rem;
+  border-radius: 50%;
 }
 
 .inactive {

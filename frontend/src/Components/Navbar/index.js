@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
+import Logo from "../images/logo-white.png";
 
 function Nav(props) {
   const [post, setPost] = useState(0);
@@ -46,11 +47,7 @@ function Nav(props) {
   return (
     <div className="nav">
       <div className="nav__regular">
-        <img
-          className="nav-container-logo"
-          src="./images/logo-white.png"
-          alt="logo"
-        />
+        <img className="nav-container-logo" src={Logo} alt="logo" />
 
         <ul className="nav__regular__links">
           <li>
