@@ -4,7 +4,6 @@ import Button from "../Button";
 import "./index.css";
 
 function Project(props) {
-  const goTo = (e) => {};
   return (
     <div className="project__container">
       <Particles
@@ -56,9 +55,9 @@ function Project(props) {
       />
       <h3>{props.name}</h3>
       <span>{props.date}</span>
-      <img src={props.img} alt={`${props.name} preview image`} />
+      <img src={props.img} alt={`${props.name} preview`} />
       <p>{props.desc}</p>
-      <Button content="Full Project" onClick={goTo} />
+      <a href={`/Project/${props.id}`}>Full Project</a>
     </div>
   );
 }

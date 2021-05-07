@@ -9,7 +9,8 @@ function Portfolio() {
   useEffect(() => {
     let pageIndex = page * 3;
     let tempArr = [];
-    Projects.map((project, index) => {
+
+    Projects.forEach((project, index) => {
       if (page === 1 && index <= 2) {
         tempArr.push(project);
       } else if (index >= 3 * (page - 1) && index < pageIndex && page !== 1) {
@@ -18,14 +19,6 @@ function Portfolio() {
     });
     setProjects(tempArr);
   }, [page]);
-
-  const goTo = (e, index) => {
-    e.preventDefault();
-    if (index === page) {
-    } else {
-      setPage(index);
-    }
-  };
 
   const previous = (e) => {
     e.preventDefault();
@@ -98,8 +91,9 @@ function Portfolio() {
                     desc={item.desc}
                     img={item.previewImg}
                     date={item.date}
+                    id={modifier}
                   />,
-                  <div className={`break-${index}`}></div>,
+                  <div key={index + 1} className={`break-${index}`}></div>,
                 ];
               } else {
                 return [
@@ -109,8 +103,9 @@ function Portfolio() {
                     desc={item.desc}
                     img={item.previewImg}
                     date={item.date}
+                    id={index}
                   />,
-                  <div className={`break-${index}`}></div>,
+                  <div key={index + 1} className={`break-${index}`}></div>,
                 ];
               }
             })

@@ -98,7 +98,7 @@ function About() {
                 <img
                   className="card__container__more-img"
                   src={`${Cards[currentCard].imgs[1]}`}
-                  alt={`${Cards[currentCard].name} picture`}
+                  alt={`${Cards[currentCard].name} icon`}
                 />
               </div>
             </motion.div>
