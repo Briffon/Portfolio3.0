@@ -62,6 +62,7 @@ function Project() {
   return (
     <div className="page project-page__container">
       <h2>{project.name}</h2>
+      <p>{project.job}</p>
       <span>{project.date}</span>
       <div className="project-page__container__about">
         {project.imgs ? handleImgs(project.imgs) : null}
