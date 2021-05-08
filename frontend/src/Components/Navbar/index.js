@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
 import Logo from "../images/logo-white.png";
+import Close from "../images/icons/close.png";
 
 function Nav(props) {
   const [post, setPost] = useState(0);
@@ -66,11 +67,7 @@ function Nav(props) {
       </div>
 
       <div className="nav__mobile">
-        <img
-          className="nav-container-logo"
-          src="./images/logo-white.png"
-          alt="logo"
-        />
+        <img className="nav-container-logo" src={Logo} alt="logo" />
         <div className="nav__mobile__hamburger" onClick={openMobileNav}>
           <div className="nav__mobile__hamburger-line"></div>
           <div className="nav__mobile__hamburger-line"></div>
@@ -78,11 +75,7 @@ function Nav(props) {
         </div>
       </div>
       <div className="nav__mobile__menu close">
-        <img
-          onClick={(e) => closeMobileNav(e)}
-          src="./images/icons/close.png"
-          alt="close icon"
-        />
+        <img onClick={(e) => closeMobileNav(e)} src={Close} alt="close icon" />
         <ul className="nav__mobile__menu__links">
           <li>
             <a href="/">Home</a>

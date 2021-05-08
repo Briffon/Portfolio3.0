@@ -1,6 +1,5 @@
 import React from "react";
 import Particles from "react-particles-js";
-import Button from "../Button";
 import "./index.css";
 
 function Project(props) {
