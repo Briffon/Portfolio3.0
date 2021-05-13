@@ -35,6 +35,7 @@ function Nav(props) {
       .getElementsByClassName("nav__mobile__menu")[0]
       .classList.remove("close");
     document.getElementsByClassName("nav__mobile")[0].classList.add("close");
+    document.body.classList.add("stop-scrolling");
   };
 
   const closeMobileNav = (e) => {
@@ -43,6 +44,7 @@ function Nav(props) {
       .getElementsByClassName("nav__mobile__menu")[0]
       .classList.add("close");
     document.getElementsByClassName("nav__mobile")[0].classList.remove("close");
+    document.body.classList.remove("stop-scrolling");
   };
 
   return (
