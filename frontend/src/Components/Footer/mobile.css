@@ -1,0 +1,35 @@
+@media (max-width: 835px) {
+  .break {
+    display: unset;
+  }
+
+  .footer__container__contact,
+  .footer__container__partner {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 555px) {
+  .break {
+    display: none;
+  }
+  .footer__container__contact,
+  .footer__container__partner {
+    margin-top: unset;
+    margin-left: unset;
+    margin-right: unset;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .footer__container__contact,
+  .footer__container__partner,
+  .footer__container__social-links {
+    margin-top: 1rem;
+  }
+}
