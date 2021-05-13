@@ -71,7 +71,7 @@
   height: 35vh;
   margin: 1rem;
   object-fit: cover;
-  object-position: 50% 50%;
+  object-position: 50% 0%;
   padding: 0;
   -webkit-box-shadow: -2px 2px 2px 0px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: -2px 2px 2px 0px rgba(0, 0, 0, 0.16);
