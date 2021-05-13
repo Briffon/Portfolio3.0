@@ -65,9 +65,27 @@ function Landing() {
       </h1>
 
       <div className="landing-container__icons">
-        <img src="./images/icons/insta.png" alt="instagram logo" />
-        <img src="./images/icons/in.png" alt="linkedin logo" />
-        <img src="./images/icons/fb.png" alt="FaceBook logo" />
+        <a
+          href="https://www.instagram.com/btsmithdev/?hl=en"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img src="./images/icons/insta.png" alt="instagram logo" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/britton-smith-10522a1a3/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img src="./images/icons/in.png" alt="linkedin logo" />
+        </a>
+        {/* <a
+          href="https://www.instagram.com/btsmithdev/?hl=en"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img src="./images/icons/fb.png" alt="FaceBook logo" />
+        </a> */}
       </div>
     </div>
   );

@@ -35,6 +35,7 @@ function Nav(props) {
       .getElementsByClassName("nav__mobile__menu")[0]
       .classList.remove("close");
     document.getElementsByClassName("nav__mobile")[0].classList.add("close");
+    document.body.classList.add("stop-scrolling");
   };
 
   const closeMobileNav = (e) => {
@@ -43,12 +44,15 @@ function Nav(props) {
       .getElementsByClassName("nav__mobile__menu")[0]
       .classList.add("close");
     document.getElementsByClassName("nav__mobile")[0].classList.remove("close");
+    document.body.classList.remove("stop-scrolling");
   };
 
   return (
     <div className="nav">
       <div className="nav__regular">
-        <img className="nav-container-logo" src={Logo} alt="logo" />
+        <a href="/">
+          <img className="nav-container-logo" src={Logo} alt="logo" />
+        </a>
 
         <ul className="nav__regular__links">
           <li>
@@ -67,7 +71,9 @@ function Nav(props) {
       </div>
 
       <div className="nav__mobile">
-        <img className="nav-container-logo" src={Logo} alt="logo" />
+        <a href="/">
+          <img className="nav-container-logo" src={Logo} alt="logo" />
+        </a>
         <div className="nav__mobile__hamburger" onClick={openMobileNav}>
           <div className="nav__mobile__hamburger-line"></div>
           <div className="nav__mobile__hamburger-line"></div>
