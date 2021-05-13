@@ -1,8 +1,11 @@
 [
   {
     "name": "ColdSprings",
-    "previewImg": "../images/cs-screens/Home.png",
-    "imgs": ["../images/cs-screens/Home.png"],
+    "previewImg": "https://prnt.sc/12v3h2w",
+    "imgs": [
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/cs-screens/News.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/cs-screens/Meeting%20Minutes.png?raw=true"
+    ],
     "desc": "Coldsprings township came to my partner company digitalbyte.io to redesign their old site. I was personally responsible for the designs and the front-end of the site. My main goal with the site was to make it user friendly. I chose a very simplistic color scheme consisting of mostly white and black with a nice shade of green to make important aspects stick out. I knew my user base would be a variety of different people considering this is an entire township so I wanted to appeal to everyone. I made sure that the information was readily available and easy to find where you’re on a phone or desktop. After designing I used the reactJS framework to bring the site to life. The site is now more user friendly, has faster loading times, compatible with all devices and comes with an admin dashboard for the township to do features such as add news articles. Overall my client was very satisfied and I had a lot of fun making the site",
     "job": "Full Stack Website",
     "link": "https://unsplash.com/",
