@@ -5,6 +5,7 @@ import Li from "../images/icons/in.png";
 import Fb from "../images/icons/fb.png";
 import Email from "../images/icons/email.png";
 import Phone from "../images/icons/circle1158.png";
+import "./mobile.css";
 
 function Footer() {
   return (
@@ -24,7 +25,7 @@ function Footer() {
           <img src={Fb} alt="facebook icon" />
         </div>
       </div>
-
+      <div className="break"></div>
       <div className="footer__container__contact">
         <h4>Contact Me</h4>
         <div className="footer__container__contact__field">
@@ -49,7 +50,9 @@ function Footer() {
           <p>(678)-538-7485</p>
         </div>
       </div>
-      <span>@Britton Smith 2021</span>
+      <div className="footer__container__copyright">
+        <p>@Britton Smith 2021</p>
+      </div>
     </div>
   );
 }
