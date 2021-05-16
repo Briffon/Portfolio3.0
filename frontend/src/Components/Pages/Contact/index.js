@@ -178,7 +178,7 @@ function Contact() {
           <div className="contact__container__cta__item">
             <p>
               <img src="./images/icons/email.png" alt="email icon" />
-              managment@digitalbyte.io
+              management@digitalbyte.io
             </p>
             <p>
               <img src="./images/icons/circle1158.png" alt="phone icon" />

@@ -42,12 +42,12 @@ function Footer() {
         <h4>Partner</h4>
         <div className="footer__container__partner__field">
           <img src={Email} alt="email icon" />
-          <p>digitalbyteadmin@digitalbyte.io</p>
+          <p>management@digitalbyte.io</p>
         </div>
 
         <div className="footer__container__partner__field">
           <img src={Phone} alt="phone icon" />
-          <p>(678)-538-7485</p>
+          <p>(616)-490-4608</p>
         </div>
       </div>
       <div className="footer__container__copyright">
