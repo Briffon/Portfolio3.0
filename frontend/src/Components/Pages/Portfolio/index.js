@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./index.css";
 import Projects from "../../jsons/projects.json";
 import Project from "../../Project";
+import { motion } from "framer-motion";
 function Portfolio() {
   const [projects, setProjects] = useState([]);
   const [page, setPage] = useState(1);
@@ -87,8 +88,39 @@ function Portfolio() {
     }
   };
 
+  const pageTransition = {
+    type: "tween",
+    ease: "anticipate",
+    duration: 0.8,
+  };
+
+  const pageVariants = {
+    initial: {
+      opacity: 0,
+      x: "-10vw",
+      scale: 0.8,
+    },
+    in: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+    },
+    out: {
+      opacity: 0,
+      x: "100vw",
+      scale: 1.5,
+    },
+  };
+
   return (
-    <div className="page portfolio__container">
+    <motion.div
+      className="page portfolio__container"
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
       <h2>Portfolio</h2>
       <div className="portfolio__container__items">
         {console.log(projects)}
@@ -137,7 +169,7 @@ function Portfolio() {
           alt="next projects"
         />
       </div>
-    </div>
+    </motion.div>
   );
 }
 

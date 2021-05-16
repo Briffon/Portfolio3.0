@@ -4,6 +4,7 @@ import Projects from "../../jsons/projects.json";
 import Close from "../../images/icons/close.png";
 import "./index.css";
 import "./mobile.css";
+import { motion } from "framer-motion";
 
 function Project() {
   const [project, setProject] = useState("");
@@ -125,8 +126,39 @@ function Project() {
       document.body.classList.remove("stop-scrolling");
     }
   };
+
+  const pageTransition = {
+    type: "tween",
+    ease: "anticipate",
+    duration: 0.8,
+  };
+
+  const pageVariants = {
+    initial: {
+      opacity: 0,
+      x: "-10vw",
+      scale: 0.8,
+    },
+    in: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+    },
+    out: {
+      opacity: 0,
+      x: "100vw",
+      scale: 1.5,
+    },
+  };
   return (
-    <div className="page project-page__container">
+    <motion.div
+      className="page project-page__container"
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
       <div onClick={close} className="project-page__container__expand close">
         <div className="project-page__container__expand__content">
           <img onClick={close} src={Close} className="close-content" alt="x" />
@@ -145,7 +177,7 @@ function Project() {
           Visit Now
         </a>
       ) : null}
-    </div>
+    </motion.div>
   );
 }
 

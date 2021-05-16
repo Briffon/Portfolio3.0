@@ -47,8 +47,38 @@ function About() {
       imgs: ["./images/icons/analytics.png", "./images/icons/google.png"],
     },
   ];
+
+  const pageTransition = {
+    type: "tween",
+    ease: "anticipate",
+    duration: 0.8,
+  };
+  const pageVariants = {
+    initial: {
+      opacity: 0,
+      x: "-10vw",
+      scale: 0.8,
+    },
+    in: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+    },
+    out: {
+      opacity: 0,
+      x: "100vw",
+      scale: 1.5,
+    },
+  };
   return (
-    <div className="page about__container">
+    <motion.div
+      className="page about__container"
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
       <div className="about__container__about-me">
         <h2>About Me</h2>
         <p>
@@ -138,7 +168,7 @@ function About() {
           <Technology name="Google Analytics" img="./images/icons/google.png" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
