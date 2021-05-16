@@ -9,7 +9,8 @@ function Portfolio() {
   useEffect(() => {
     let pageIndex = page * 3;
     let tempArr = [];
-    Projects.map((project, index) => {
+
+    Projects.forEach((project, index) => {
       if (page === 1 && index <= 2) {
         tempArr.push(project);
       } else if (index >= 3 * (page - 1) && index < pageIndex && page !== 1) {
@@ -19,13 +20,17 @@ function Portfolio() {
     setProjects(tempArr);
   }, [page]);
 
-  const goTo = (e, index) => {
-    e.preventDefault();
-    if (index === page) {
+  window.addEventListener("scroll", (e) => {
+    let y = window.scrollY;
+    let pagination = document.getElementsByClassName(
+      "portfolio__container__pagination"
+    )[0];
+    if (y >= 1715) {
+      pagination.classList.add("close");
     } else {
-      setPage(index);
+      pagination.classList.remove("close");
     }
-  };
+  });
 
   const previous = (e) => {
     e.preventDefault();
@@ -98,8 +103,9 @@ function Portfolio() {
                     desc={item.desc}
                     img={item.previewImg}
                     date={item.date}
+                    id={modifier}
                   />,
-                  <div className={`break-${index}`}></div>,
+                  <div key={index + 1} className={`break-${index}`}></div>,
                 ];
               } else {
                 return [
@@ -109,8 +115,9 @@ function Portfolio() {
                     desc={item.desc}
                     img={item.previewImg}
                     date={item.date}
+                    id={index}
                   />,
-                  <div className={`break-${index}`}></div>,
+                  <div key={index + 1} className={`break-${index}`}></div>,
                 ];
               }
             })

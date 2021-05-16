@@ -1,51 +1,76 @@
 [
   {
-    "name": "ColdSprings",
-    "previewImg": "https://images.unsplash.com/photo-1566241477600-ac026ad43874?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1330&q=80",
-    "imgs": [],
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    "name": "Foam Solutions LLC",
+    "previewImg": "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/fs-screens/Preview.png?raw=true",
+    "imgs": [
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/fs-screens/about.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/fs-screens/features.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/fs-screens/photos.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/fs-screens/testing.png?raw=true"
+    ],
+    "desc": "Foam Solutions LLC came to DigitalByte looking for a complete overhaul on their site. They wanted the process of their work detailed for customers to see, map with their location and affiliates, contact information and more. My main goal with this site was to emphasize how much they cared about their customers and display their process as transparent as possible. I chose a light blue and green for accent colors since they were heavily focused on being eco friendly. Since there wasn’t too much much information I made the entire site one page for customer ease. This was a really fun project and I still work with them to this day!",
+    "job": "Full Stack Website",
+    "link": "https://foamsolutionllc.com/",
+    "date": "11/24/2020"
+  },
+
+  {
+    "name": "ColdSprings Township",
+    "previewImg": "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/cs-screens/preview.png?raw=true",
+    "imgs": [
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/cs-screens/News.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/cs-screens/Meeting%20Minutes.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/cs-screens/Ordinances.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/cs-screens/News%20Article.png?raw=true"
+    ],
+    "desc": "Coldsprings township came to my partner company digitalbyte.io to redesign their old site. I was personally responsible for the designs and the front-end of the site. My main goal with the site was to make it user friendly. I chose a very simplistic color scheme consisting of mostly white and black with a nice shade of green to make important aspects stick out. I knew my user base would be a variety of different people considering this is an entire township so I wanted to appeal to everyone. I made sure that the information was readily available and easy to find where you’re on a phone or desktop. After designing I used the reactJS framework to bring the site to life. The site is now more user friendly, has faster loading times, compatible with all devices and comes with an admin dashboard for the township to do features such as add news articles. Overall my client was very satisfied and I had a lot of fun making the site!",
+    "job": "Full Stack Website",
+    "link": "",
     "date": "4/3/2021"
   },
+
   {
-    "name": "Trendz",
-    "previewImg": "https://images.unsplash.com/photo-1566241440091-ec10de8db2e1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1476&q=80",
-    "imgs": [],
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-    "date": "4/5/2021"
+    "name": "Lovast",
+    "previewImg": "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/Lovast/Preview.png?raw=true",
+    "imgs": [
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/Lovast/differnt.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/Lovast/react.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/Lovast/seo.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/Lovast/backend.png?raw=true"
+    ],
+    "desc": "Lovast is the old name of my partner company DigitalByte, we offer Full Stack Development services. Our new site is currently in the works, but you can still contact us and see how some of our processes work through the old site.",
+    "job": "FullStack",
+    "link": "https://lovast.com/",
+    "date": "4/3/2021"
   },
-  {
-    "name": "Fire Department Of Coldsprings",
-    "previewImg": "https://images.unsplash.com/photo-1531030874896-fdef6826f2f7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
-    "imgs": [],
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-    "date": "4/4/2021"
-  },
+
   {
     "name": "Reflections Of Trinity",
-    "previewImg": "https://images.unsplash.com/photo-1566241477600-ac026ad43874?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1330&q=80",
-    "imgs": [],
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-    "date": "4/8/2021"
+    "previewImg": "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/rot/preview.png?raw=true",
+    "imgs": [
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/rot/item.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/rot/news.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/rot/program.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/rot/quick-links.png?raw=true"
+    ],
+    "desc": "Reflections of Trinity is a non profit organization based in Cobb county GA. Their website was outdated and they were looking for a new design to help user navigation. My main goal for this site was to emphasize the need of donations and improve user experience/usability. I chose to stick with their previous color palette for the most part and tried to clean up repeat information they had across their site. I also made it a lot easier for everybody to find needed information by implementing design standards across the site. Reflections was very happy with the final results and I was glad to help a local non profit near me.",
+    "job": "Re-Design",
+    "link": "",
+    "date": "3/2/2021"
   },
+
   {
-    "name": "Reflections Of Trinity",
-    "previewImg": "https://images.unsplash.com/photo-1566241477600-ac026ad43874?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1330&q=80",
-    "imgs": [],
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-    "date": "4/8/2021"
-  },
-  {
-    "name": "Reflections Of Trinity",
-    "previewImg": "https://images.unsplash.com/photo-1566241477600-ac026ad43874?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1330&q=80",
-    "imgs": [],
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-    "date": "4/8/2021"
-  },
-  {
-    "name": "ColdSprings",
-    "previewImg": "https://images.unsplash.com/photo-1566241477600-ac026ad43874?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1330&q=80",
-    "imgs": [],
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-    "date": "4/9/2021"
+    "name": "ColdSprings Fire Department",
+    "previewImg": "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/csf/preview.png?raw=true",
+    "imgs": [
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/csf/about.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/csf/department.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/csf/events.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/csf/links.png?raw=true"
+    ],
+    "desc": "The Coldsprings fire department reached out to my partner, DigitalByte, for a re-development of their site. Their old site has not been updated in quite some time. This project is still new and I will keep this updated for everyone to see. So far we have the lofi wireframes and plan to have the full designs finished soon!",
+    "job": "Re-Design",
+    "link": "",
+    "date": "5/16/2021"
   }
 ]

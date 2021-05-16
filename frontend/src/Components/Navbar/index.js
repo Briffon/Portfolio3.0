@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
+import Logo from "../images/logo-white.png";
+import Close from "../images/icons/close.png";
+import Me from "../images/me.jpg";
 
 function Nav(props) {
   const [post, setPost] = useState(0);
@@ -33,6 +36,7 @@ function Nav(props) {
       .getElementsByClassName("nav__mobile__menu")[0]
       .classList.remove("close");
     document.getElementsByClassName("nav__mobile")[0].classList.add("close");
+    document.body.classList.add("stop-scrolling");
   };
 
   const closeMobileNav = (e) => {
@@ -41,16 +45,15 @@ function Nav(props) {
       .getElementsByClassName("nav__mobile__menu")[0]
       .classList.add("close");
     document.getElementsByClassName("nav__mobile")[0].classList.remove("close");
+    document.body.classList.remove("stop-scrolling");
   };
 
   return (
     <div className="nav">
       <div className="nav__regular">
-        <img
-          className="nav-container-logo"
-          src="./images/logo-white.png"
-          alt="logo"
-        />
+        <a href="/">
+          <img className="nav-container-logo" src={Logo} alt="logo" />
+        </a>
 
         <ul className="nav__regular__links">
           <li>
@@ -65,15 +68,14 @@ function Nav(props) {
           <li>
             <a href="/Contact">Contact</a>
           </li>
+          <img src={Me} alt="Britton smith" />
         </ul>
       </div>
 
       <div className="nav__mobile">
-        <img
-          className="nav-container-logo"
-          src="./images/logo-white.png"
-          alt="logo"
-        />
+        <a href="/">
+          <img className="nav-container-logo" src={Logo} alt="logo" />
+        </a>
         <div className="nav__mobile__hamburger" onClick={openMobileNav}>
           <div className="nav__mobile__hamburger-line"></div>
           <div className="nav__mobile__hamburger-line"></div>
@@ -81,11 +83,7 @@ function Nav(props) {
         </div>
       </div>
       <div className="nav__mobile__menu close">
-        <img
-          onClick={(e) => closeMobileNav(e)}
-          src="./images/icons/close.png"
-          alt="close icon"
-        />
+        <img onClick={(e) => closeMobileNav(e)} src={Close} alt="close icon" />
         <ul className="nav__mobile__menu__links">
           <li>
             <a href="/">Home</a>

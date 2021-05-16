@@ -1,18 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "../Button";
 import Particles from "react-particles-js";
-import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import "./index.css";
 
 function Card(props) {
-  const [isOpen, setIsOpen] = useState(false);
-  // const toggleOpen = (e) => {
-  //   e.preventDefault();
-  //   setIsOpen(!isOpen);
-  // };
-
   return (
-    <motion.div className={`card__container ${props.class}`}>
+    <div className={`card__container ${props.class}`}>
       <Particles
         width="100%"
         height="100%"
@@ -68,7 +61,7 @@ function Card(props) {
         <p>{props.content}</p>
       </div>
       <Button content="Read More" onClick={(e) => props.animate(e)} />
-    </motion.div>
+    </div>
   );
 }
 
