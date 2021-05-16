@@ -152,6 +152,10 @@
   overflow: hidden;
 }
 
+.active {
+  color: cyan !important;
+}
+
 @media (max-width: 541px) {
   .nav__regular {
     display: none;

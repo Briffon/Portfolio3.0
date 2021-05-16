@@ -3,10 +3,11 @@ import "./index.css";
 import Logo from "../images/logo-white.png";
 import Close from "../images/icons/close.png";
 import Me from "../images/me.jpg";
+import { useLocation } from "react-router-dom";
 
 function Nav(props) {
   const [post, setPost] = useState(0);
-
+  const location = useLocation();
   window.addEventListener("scroll", () => {
     let y = window.scrollY;
     setPost(y);
@@ -14,6 +15,23 @@ function Nav(props) {
   useEffect(() => {
     let regularNav = document.getElementsByClassName("nav__regular")[0];
     let mobileNav = document.getElementsByClassName("nav__mobile")[0];
+    let nav = document.getElementsByClassName("nav__regular__links")[0];
+    switch (location.pathname) {
+      case "/":
+        nav.childNodes[0].childNodes[0].classList.add("active");
+        break;
+      case "/About":
+        nav.childNodes[1].childNodes[0].classList.add("active");
+        break;
+      case "/Portfolio":
+        nav.childNodes[2].childNodes[0].classList.add("active");
+        break;
+      case "/Contact":
+        nav.childNodes[3].childNodes[0].classList.add("active");
+        break;
+      default:
+        break;
+    }
     if (post >= 100) {
       if (!mobileNav.classList.contains("close")) {
         mobileNav.style.backgroundColor = "rgba(0,0,0,0.75)";
@@ -29,7 +47,7 @@ function Nav(props) {
         regularNav.style.backgroundColor = "transparent";
       }
     }
-  }, [post]);
+  }, [post, location]);
   const openMobileNav = (e) => {
     e.preventDefault();
     document

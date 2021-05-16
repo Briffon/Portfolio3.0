@@ -11,20 +11,17 @@ function About() {
 
   const toggleOpen = (e, index) => {
     e.preventDefault();
-    if (
-      document
-        .getElementsByClassName("about__container__services__cards")[0]
-        .classList.contains("close")
-    ) {
-      document
-        .getElementsByClassName("about__container__services__cards")[0]
-        .classList.remove("close");
+    let container = document.getElementsByClassName(
+      "about__container__services__cards"
+    )[0];
+
+    if (container.classList.contains("close")) {
+      container.classList.remove("close");
       setIsOpen(!isOpen);
     } else {
-      document
-        .getElementsByClassName("about__container__services__cards")[0]
-        .classList.add("close");
+      container.classList.add("close");
       setCurrentCard(index);
+      window.scrollTo(0, 1300);
       setIsOpen(!isOpen);
     }
   };
@@ -53,6 +50,7 @@ function About() {
     ease: "anticipate",
     duration: 0.8,
   };
+
   const pageVariants = {
     initial: {
       opacity: 0,
@@ -70,6 +68,7 @@ function About() {
       scale: 1.5,
     },
   };
+
   return (
     <motion.div
       className="page about__container"
@@ -118,7 +117,8 @@ function About() {
               <div className="card__container__more__info">
                 <h2>{Cards[currentCard].name}</h2>
                 <p>
-                  {Cards[currentCard].content} <a href="/">contact me!</a>
+                  {Cards[currentCard].content}{" "}
+                  <a href="/Contact">contact me!</a>
                 </p>
               </div>
               <div className="card__container__more__imgs">
