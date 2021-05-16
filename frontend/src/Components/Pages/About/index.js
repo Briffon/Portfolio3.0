@@ -11,20 +11,17 @@ function About() {
 
   const toggleOpen = (e, index) => {
     e.preventDefault();
-    if (
-      document
-        .getElementsByClassName("about__container__services__cards")[0]
-        .classList.contains("close")
-    ) {
-      document
-        .getElementsByClassName("about__container__services__cards")[0]
-        .classList.remove("close");
+    let container = document.getElementsByClassName(
+      "about__container__services__cards"
+    )[0];
+
+    if (container.classList.contains("close")) {
+      container.classList.remove("close");
       setIsOpen(!isOpen);
     } else {
-      document
-        .getElementsByClassName("about__container__services__cards")[0]
-        .classList.add("close");
+      container.classList.add("close");
       setCurrentCard(index);
+      window.scrollTo(0, 1300);
       setIsOpen(!isOpen);
     }
   };
@@ -47,23 +44,57 @@ function About() {
       imgs: ["./images/icons/analytics.png", "./images/icons/google.png"],
     },
   ];
+
+  const pageTransition = {
+    type: "tween",
+    ease: "anticipate",
+    duration: 0.8,
+  };
+
+  const pageVariants = {
+    initial: {
+      opacity: 0,
+      x: "-10vw",
+      scale: 0.8,
+    },
+    in: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+    },
+    out: {
+      opacity: 0,
+      x: "100vw",
+      scale: 1.5,
+    },
+  };
+
   return (
-    <div className="page about__container">
+    <motion.div
+      className="page about__container"
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
       <div className="about__container__about-me">
         <h2>About Me</h2>
         <p>
-          Hello, my name is Britton Smith, I am a Full Stack Web
+          Hello my name is Britton Smith, I am a Full Stack Web
           Developer/Designer from Fullsail University partnered with
           DigitalByte.io. I make beautiful modern websites that are optimized
-          for all devices. I work with many technologies to bring my clients the
-          most efficient product for their needs. I am also certified in Google
-          Analytics so I can track and make reports of web traffic. Using this
-          tool I can develop and execute strategies for digital marketing
-          efforts. These efforts will create revenue-driving programs that build
-          relationships with clients, as well as online audiences through the
-          various digital and social media platforms. If you're interested in
-          building a new site, redesigning your current website, or growing your
-          customer market don't be afraid to contact me!
+          for all devices. Working with many technologies, I to bring my clients
+          the most efficient product for their needs. I am specialized in using
+          the ReactJS framework, it's the best tool to bring my clients fast,
+          secure, and optimized web applications. Being certified in Google
+          Analytics I can track and make reports of web traffic to develop and
+          execute strategies for digital marketing efforts. These efforts will
+          create revenue-driving programs that build relationships with clients,
+          as well as online audiences through the various digital and social
+          media platforms. If you're interested in building a new site,
+          redesigning your current website, or growing your customer market
+          don't be afraid to contact me!
         </p>
       </div>
       <div className="about__container__services">
@@ -86,7 +117,8 @@ function About() {
               <div className="card__container__more__info">
                 <h2>{Cards[currentCard].name}</h2>
                 <p>
-                  {Cards[currentCard].content} <a href="/">contact me!</a>
+                  {Cards[currentCard].content}{" "}
+                  <a href="/Contact">contact me!</a>
                 </p>
               </div>
               <div className="card__container__more__imgs">
@@ -136,7 +168,7 @@ function About() {
           <Technology name="Google Analytics" img="./images/icons/google.png" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

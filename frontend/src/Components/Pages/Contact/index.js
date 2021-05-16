@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./index.css";
 import Particles from "react-particles-js";
 import axios from "axios";
+import { motion } from "framer-motion";
 
 function Contact() {
   const [name, setName] = useState("");
@@ -57,8 +58,39 @@ function Contact() {
     }
   };
 
+  const pageTransition = {
+    type: "tween",
+    ease: "anticipate",
+    duration: 0.8,
+  };
+
+  const pageVariants = {
+    initial: {
+      opacity: 0,
+      x: "-10vw",
+      scale: 0.8,
+    },
+    in: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+    },
+    out: {
+      opacity: 0,
+      x: "100vw",
+      scale: 1.5,
+    },
+  };
+
   return (
-    <div className="page contact__container">
+    <motion.div
+      className="page contact__container"
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
       <h2>Contact Me</h2>
       <div className="contact__container__items">
         <form id="form" onSubmit={submit}>
@@ -143,9 +175,19 @@ function Contact() {
               (678)-538-7485
             </p>
           </div>
+          <div className="contact__container__cta__item">
+            <p>
+              <img src="./images/icons/email.png" alt="email icon" />
+              management@digitalbyte.io
+            </p>
+            <p>
+              <img src="./images/icons/circle1158.png" alt="phone icon" />
+              (616)-490-4608
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

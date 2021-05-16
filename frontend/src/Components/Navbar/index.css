@@ -53,6 +53,8 @@
   z-index: 2;
   position: fixed;
   height: 10vh;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .nav__mobile__hamburger {
@@ -67,18 +69,6 @@
   border-radius: 20px;
   position: relative;
 }
-
-/* .nav__mobile__hamburger-line::after {
-  content: "";
-  border-top: 5px solid black;
-  position: absolute;
-  bottom: -1px;
-  right: 1px;
-  width: 100%;
-  z-index: -1;
-  border-radius: 10px;
-  opacity: 0.35;
-} */
 
 .nav__mobile__hamburger .nav__mobile__hamburger-line:nth-of-type(1) {
   width: 45px;
@@ -160,6 +150,10 @@
 .stop-scrolling {
   height: 100%;
   overflow: hidden;
+}
+
+.active {
+  color: cyan !important;
 }
 
 @media (max-width: 541px) {
