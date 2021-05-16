@@ -30,6 +30,21 @@
   },
 
   {
+    "name": "Lovast",
+    "previewImg": "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/Lovast/Preview.png?raw=true",
+    "imgs": [
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/Lovast/differnt.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/Lovast/react.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/Lovast/seo.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/Lovast/backend.png?raw=true"
+    ],
+    "desc": "Lovast is the old name of my partner company DigitalByte, we offer Full Stack Development services. Our new site is currently in the works, but you can still contact us and see how some of our processes work through the old site.",
+    "job": "FullStack",
+    "link": "https://lovast.com/",
+    "date": "4/3/2021"
+  },
+
+  {
     "name": "Reflections Of Trinity",
     "previewImg": "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/rot/preview.png?raw=true",
     "imgs": [
@@ -46,21 +61,16 @@
 
   {
     "name": "ColdSprings Fire Department",
-    "previewImg": "",
-    "imgs": [],
+    "previewImg": "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/csf/preview.png?raw=true",
+    "imgs": [
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/csf/about.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/csf/department.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/csf/events.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/csf/links.png?raw=true"
+    ],
     "desc": "The Coldsprings fire department reached out to my partner, DigitalByte, for a re-development of their site. Their old site has not been updated in quite some time. This project is still new and I will keep this updated for everyone to see. So far we have the lofi wireframes and plan to have the full designs finished soon!",
     "job": "Re-Design",
     "link": "",
     "date": "5/16/2021"
-  },
-
-  {
-    "name": "Lovast",
-    "previewImg": "",
-    "imgs": [],
-    "desc": "Lovast is the old name of my partner company DigitalByte, we offer Full Stack Development services. Our new site is currently in the works, but you can still contact us and see how some of our processes work through the old site.",
-    "job": "FullStack",
-    "link": "https://lovast.com/",
-    "date": "4/3/2021"
   }
 ]

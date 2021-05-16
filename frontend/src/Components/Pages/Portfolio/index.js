@@ -20,6 +20,18 @@ function Portfolio() {
     setProjects(tempArr);
   }, [page]);
 
+  window.addEventListener("scroll", (e) => {
+    let y = window.scrollY;
+    let pagination = document.getElementsByClassName(
+      "portfolio__container__pagination"
+    )[0];
+    if (y >= 1715) {
+      pagination.classList.add("close");
+    } else {
+      pagination.classList.remove("close");
+    }
+  });
+
   const previous = (e) => {
     e.preventDefault();
     let nextPage = page - 1;
