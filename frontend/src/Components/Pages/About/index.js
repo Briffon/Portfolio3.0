@@ -52,18 +52,20 @@ function About() {
       <div className="about__container__about-me">
         <h2>About Me</h2>
         <p>
-          Hello, my name is Britton Smith, I am a Full Stack Web
+          Hello my name is Britton Smith, I am a Full Stack Web
           Developer/Designer from Fullsail University partnered with
           DigitalByte.io. I make beautiful modern websites that are optimized
-          for all devices. I work with many technologies to bring my clients the
-          most efficient product for their needs. I am also certified in Google
-          Analytics so I can track and make reports of web traffic. Using this
-          tool I can develop and execute strategies for digital marketing
-          efforts. These efforts will create revenue-driving programs that build
-          relationships with clients, as well as online audiences through the
-          various digital and social media platforms. If you're interested in
-          building a new site, redesigning your current website, or growing your
-          customer market don't be afraid to contact me!
+          for all devices. Working with many technologies, I to bring my clients
+          the most efficient product for their needs. I am specialized in using
+          the ReactJS framework, it's the best tool to bring my clients fast,
+          secure, and optimized web applications. Being certified in Google
+          Analytics I can track and make reports of web traffic to develop and
+          execute strategies for digital marketing efforts. These efforts will
+          create revenue-driving programs that build relationships with clients,
+          as well as online audiences through the various digital and social
+          media platforms. If you're interested in building a new site,
+          redesigning your current website, or growing your customer market
+          don't be afraid to contact me!
         </p>
       </div>
       <div className="about__container__services">
