@@ -31,10 +31,15 @@
 
   {
     "name": "Reflections Of Trinity",
-    "previewImg": "",
-    "imgs": [],
+    "previewImg": "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/rot/preview.png?raw=true",
+    "imgs": [
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/rot/item.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/rot/news.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/rot/program.png?raw=true",
+      "https://github.com/Briffon/Portfolio3.0/blob/dev/frontend/src/Components/images/rot/quick-links.png?raw=true"
+    ],
     "desc": "Reflections of Trinity is a non profit organization based in Cobb county GA. Their website was outdated and they were looking for a new design to help user navigation. My main goal for this site was to emphasize the need of donations and improve user experience/usability. I chose to stick with their previous color palette for the most part and tried to clean up repeat information they had across their site. I also made it a lot easier for everybody to find needed information by implementing design standards across the site. Reflections was very happy with the final results and I was glad to help a local non profit near me.",
-    "job": "Re Design",
+    "job": "Re-Design",
     "link": "",
     "date": "3/2/2021"
   },
@@ -43,7 +48,7 @@
     "name": "ColdSprings Fire Department",
     "previewImg": "",
     "imgs": [],
-    "desc": "",
+    "desc": "The Coldsprings fire department reached out to my partner, DigitalByte, for a re-development of their site. Their old site has not been updated in quite some time. This project is still new and I will keep this updated for everyone to see. So far we have the lofi wireframes and plan to have the full designs finished soon!",
     "job": "Re-Design",
     "link": "",
     "date": "5/16/2021"
@@ -53,9 +58,9 @@
     "name": "Lovast",
     "previewImg": "",
     "imgs": [],
-    "desc": "",
+    "desc": "Lovast is the old name of my partner company DigitalByte, we offer Full Stack Development services. Our new site is currently in the works, but you can still contact us and see how some of our processes work through the old site.",
     "job": "FullStack",
-    "link": "",
+    "link": "https://lovast.com/",
     "date": "4/3/2021"
   }
 ]
