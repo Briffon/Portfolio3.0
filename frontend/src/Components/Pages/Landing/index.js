@@ -2,10 +2,40 @@ import React from "react";
 import RRT from "react-rotating-text";
 import Particles from "react-particles-js";
 import "./index.css";
+import { motion } from "framer-motion";
 
 function Landing() {
+  const pageTransition = {
+    type: "tween",
+    ease: "anticipate",
+    duration: 0.8,
+  };
+  const pageVariants = {
+    initial: {
+      opacity: 0,
+      x: "-10vw",
+      scale: 0.8,
+    },
+    in: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+    },
+    out: {
+      opacity: 0,
+      x: "100vw",
+      scale: 1.5,
+    },
+  };
   return (
-    <div className="page landing-container">
+    <motion.div
+      className="page landing-container"
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
       <Particles
         width="100vw"
         params={{
@@ -79,16 +109,8 @@ function Landing() {
         >
           <img src="./images/icons/in.png" alt="linkedin logo" />
         </a>
-
-        {/* <a
-          href="https://www.instagram.com/btsmithdev/?hl=en"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <img src="./images/icons/fb.png" alt="FaceBook logo" />
-        </a> */}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
