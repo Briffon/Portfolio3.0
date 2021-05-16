@@ -79,6 +79,7 @@ function Landing() {
         >
           <img src="./images/icons/in.png" alt="linkedin logo" />
         </a>
+
         {/* <a
           href="https://www.instagram.com/btsmithdev/?hl=en"
           rel="noreferrer"

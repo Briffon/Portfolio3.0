@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Projects from "../../jsons/projects.json";
+import Close from "../../images/icons/close.png";
 import "./index.css";
 import "./mobile.css";
 
 function Project() {
   const [project, setProject] = useState("");
+  const [img, setImg] = useState("");
   const { id } = useParams();
   useEffect(() => {
     Projects.forEach((project, index) => {
@@ -24,34 +26,74 @@ function Project() {
       case 4:
         return (
           <div className="project-page__container__about__imgs-4">
-            <img src={arr[0]} alt={`${project.name} screenshot`} />
-            <img src={arr[1]} alt={`${project.name} screenshot`} />
-            <img src={arr[2]} alt={`${project.name} screenshot`} />
-            <img src={arr[3]} alt={`${project.name} screenshot`} />
+            <img
+              onClick={(e) => expand(e, arr[0])}
+              src={arr[0]}
+              alt={`${project.name} screenshot`}
+            />
+            <img
+              onClick={(e) => expand(e, arr[1])}
+              src={arr[1]}
+              alt={`${project.name} screenshot`}
+            />
+            <img
+              onClick={(e) => expand(e, arr[2])}
+              src={arr[2]}
+              alt={`${project.name} screenshot`}
+            />
+            <img
+              onClick={(e) => expand(e, arr[3])}
+              src={arr[3]}
+              alt={`${project.name} screenshot`}
+            />
           </div>
         );
 
       case 3:
         return (
           <div className="project-page__container__about__imgs-3">
-            <img src={arr[0]} alt={`${project.name} screenshot`} />
-            <img src={arr[1]} alt={`${project.name} screenshot`} />
-            <img src={arr[2]} alt={`${project.name} screenshot`} />
+            <img
+              onClick={(e) => expand(e, arr[0])}
+              src={arr[0]}
+              alt={`${project.name} screenshot`}
+            />
+            <img
+              onClick={(e) => expand(e, arr[1])}
+              src={arr[1]}
+              alt={`${project.name} screenshot`}
+            />
+            <img
+              onClick={(e) => expand(e, arr[2])}
+              src={arr[2]}
+              alt={`${project.name} screenshot`}
+            />
           </div>
         );
 
       case 2:
         return (
           <div className="project-page__container__about__imgs-2">
-            <img src={arr[0]} alt={`${project.name} screenshot`} />
-            <img src={arr[1]} alt={`${project.name} screenshot`} />
+            <img
+              onClick={(e) => expand(e, arr[0])}
+              src={arr[0]}
+              alt={`${project.name} screenshot`}
+            />
+            <img
+              onClick={(e) => expand(e, arr[1])}
+              src={arr[1]}
+              alt={`${project.name} screenshot`}
+            />
           </div>
         );
 
       case 1:
         return (
           <div className="project-page__container__about__imgs-1">
-            <img src={arr[0]} alt={`${project.name} screenshot`} />
+            <img
+              onClick={(e) => expand(e, arr[0])}
+              src={arr[0]}
+              alt={`${project.name} screenshot`}
+            />
           </div>
         );
 
@@ -59,8 +101,38 @@ function Project() {
         break;
     }
   };
+
+  const expand = (e, img) => {
+    e.preventDefault();
+    let container = document.getElementsByClassName(
+      "project-page__container__expand"
+    )[0];
+    setImg(img);
+    if (container.classList.contains("close")) {
+      window.scrollTo(0, 50);
+      container.classList.remove("close");
+      document.body.classList.add("stop-scrolling");
+    }
+  };
+
+  const close = (e) => {
+    e.preventDefault();
+    let container = document.getElementsByClassName(
+      "project-page__container__expand"
+    )[0];
+    if (!container.classList.contains("close")) {
+      container.classList.add("close");
+      document.body.classList.remove("stop-scrolling");
+    }
+  };
   return (
     <div className="page project-page__container">
+      <div onClick={close} className="project-page__container__expand close">
+        <div className="project-page__container__expand__content">
+          <img onClick={close} src={Close} className="close-content" alt="x" />
+          <img src={img} alt="expanded preview" className="img-content" />
+        </div>
+      </div>
       <h2>{project.name}</h2>
       <p>{project.job}</p>
       <span>{project.date}</span>
