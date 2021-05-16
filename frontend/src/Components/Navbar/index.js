@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./index.css";
 import Logo from "../images/logo-white.png";
 import Close from "../images/icons/close.png";
+import Me from "../images/me.jpg";
 
 function Nav(props) {
   const [post, setPost] = useState(0);
@@ -67,6 +68,7 @@ function Nav(props) {
           <li>
             <a href="/Contact">Contact</a>
           </li>
+          <img src={Me} alt="Britton smith" />
         </ul>
       </div>
 
