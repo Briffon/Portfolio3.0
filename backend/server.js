@@ -8,7 +8,7 @@ const path = require("path");
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(cors());
-const whitelist = ["https://portfoliobsmith.herokuapp.com/"];
+const whitelist = ["https://btsmithdev.com/"];
 
 app.use("/sendToMe", require("./routes/sendToMe"));
 
