@@ -20,9 +20,20 @@ function Footer() {
       <div className="footer__container__social-links">
         <h4>Social Links</h4>
         <div className="footer__container__social-links__icons">
-          <img src={Insta} alt="instagram icon" />
-          <img src={Li} alt="linkedin icon" />
-          <img src={Fb} alt="facebook icon" />
+          <a
+            href="https://www.instagram.com/btsmithdev/?hl=en"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img src={Insta} alt="instagram icon" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/britton-smith-10522a1a3/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img src={Li} alt="linkedin icon" />
+          </a>
         </div>
       </div>
       <div className="break"></div>
