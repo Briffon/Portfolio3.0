@@ -91,7 +91,7 @@ function Landing() {
         }}
       />
       <h1>
-        Making Websites <RRT items={["Modern", "Responsive", "Fast"]} />
+        Making Websites <RRT items={["Modern", "Responsive", "Optimized"]} />
       </h1>
 
       <div className="landing-container__icons">
