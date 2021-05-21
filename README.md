@@ -2,8 +2,8 @@
 
 ### By Britton Smith
 
-<img src="https://github.com/Briffon/Portfolio-5/blob/master/src/art/Screenshot_1.png" 
-alt="Pokemon Advisor Home"  />
+<img src="https://github.com/Briffon/Portfolio3.0/blob/master/frontend/public/images/demo.png?raw=true" 
+alt="Britton Smith Home"  />
 
 ## Summary
 
