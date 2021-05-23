@@ -14,6 +14,7 @@
     "dev": "concurrently \"cd frontend && npm run start\" \"cd back-end && npm run start\"",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
+  "proxy": "https://localhost:5000",
   "repository": {
     "type": "git",
     "url": "https://github.com/Briffon/Portfolio3.0"
