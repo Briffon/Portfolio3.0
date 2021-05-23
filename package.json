@@ -11,8 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd frontend && npm run start",
     "api": "cd back-end; npm start",
-    "dev": "concurrently \"cd frontend && npm run start\" \"cd back-end && npm run start\"",
-    "heroku-postbuild": "cd frontend && npm install && npm run build"
+    "dev": "concurrently \"cd frontend && npm run start\" \"cd back-end && npm run start\""
   },
   "proxy": "https://localhost:5000",
   "repository": {

@@ -24,7 +24,7 @@ transporter.verify((error, success) => {
   }
 });
 
-sendToMeRouter.post("/", (req, res, next) => {
+sendToMeRouter.post("/api", (req, res, next) => {
   //make mailable object
   const mail = {
     from: req.body.email,
