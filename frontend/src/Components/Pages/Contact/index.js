@@ -20,7 +20,7 @@ function Contact() {
     e.preventDefault();
     axios
       .post(
-        "https://btsmithdev.com/api/sendToMe",
+        "https://btsmithdev.com/sendToMe",
         { name, text: message, email, subject },
         axiosConfig
       )
