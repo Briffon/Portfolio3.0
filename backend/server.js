@@ -1,4 +1,5 @@
 const express = require("express");
+const router = express.Router();
 const app = express();
 require("dotenv").config();
 const morgan = require("morgan");
@@ -11,7 +12,7 @@ app.use(cors());
 const whitelist = ["https://btsmithdev.com/api"];
 
 app.use("/api/sendToMe", require("./routes/sendToMe"));
-app.get("/api", (req, res) => {
+router.get("/api", (req, res) => {
   res.send("API Version 1.0 is running.");
 });
 
