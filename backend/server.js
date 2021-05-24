@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 const whitelist = ["https://btsmithdev.com/api"];
 
-app.use("/sendToMe", require("./routes/sendToMe"));
+app.use("/api/sendToMe", require("./routes/sendToMe"));
 
 app.use(express.static(path.join(__dirname, "../front-end/build")));
 app.get("/*", (req, res) => {
