@@ -11,7 +11,7 @@ app.use(cors());
 const whitelist = ["https://btsmithdev.com/api"];
 
 app.use("/api/sendToMe", require("./routes/sendToMe"));
-express.router.get("/", (req, res) => {
+express.router.get("/api", (req, res) => {
   res.send("API Version 1.0 is running.");
 });
 
