@@ -3,7 +3,7 @@ const router = express.Router();
 const app = express();
 require("dotenv").config();
 const morgan = require("morgan");
-const port = process.env.PORT || 5001;
+const port = process.env.PORT || 5000;
 const cors = require("cors");
 const path = require("path");
 app.use(morgan("dev"));
@@ -37,7 +37,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-app.listen(process.env.PORT || 5001, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log(`app is live on ${port}`);
 });
 
