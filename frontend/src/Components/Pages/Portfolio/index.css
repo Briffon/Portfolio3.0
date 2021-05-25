@@ -84,6 +84,7 @@
   .portfolio__container__items {
     flex-direction: column;
     flex-wrap: unset;
+    margin-bottom: 4rem;
   }
   .portfolio__container__items .project__container:nth-of-type(5) {
     margin-top: 3rem;
