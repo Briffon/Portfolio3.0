@@ -4,7 +4,7 @@ const nodemailer = require("nodemailer");
 
 const transport = {
   //all of the configuration for making a site send an email.
-  host: "smtpout.secureserver.net",
+  host: "smtp.gmail.com",
   port: 587,
   secure: false,
   auth: {

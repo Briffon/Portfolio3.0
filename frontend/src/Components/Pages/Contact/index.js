@@ -9,6 +9,9 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [messageError, setMessageError] = useState("");
   let axiosConfig = {
     headers: {
       "Content-Type": "application/json;charset=UTF-8",
@@ -16,24 +19,47 @@ function Contact() {
     },
   };
 
+  const validation = (e) => {
+    let valid = true;
+    const emptyCheck = /.*\S.*/;
+    const nameCheck = /^(([A-za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))$/gim;
+    const emailCheck =
+      /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
+    if (nameCheck.test(name) === false || emptyCheck.test(name) === false) {
+      setNameError("Please Enter a Valid Name");
+      valid = false;
+    }
+    if (emailCheck.test(email) === false || emptyCheck.test(email) === false) {
+      setEmailError("Please Enter a Valid Email");
+      valid = false;
+    }
+    if (emptyCheck.test(message) === false) {
+      setMessageError("Must Contain a Message");
+      valid = false;
+    }
+    return valid;
+  };
+
   const submit = (e) => {
     e.preventDefault();
-    axios
-      .post(
-        "https://btsmithdev.com/api/sendToMe",
-        { name, text: message, email, subject },
-        axiosConfig
-      )
-      .then((res) => {
-        setName("");
-        setEmail("");
-        setMessage("");
-        document.getElementById("form").reset();
-        alert("Message Sent!");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    if (validation() === true) {
+      axios
+        .post(
+          "https://btsmithdev.com/api/sendToMe",
+          { name, text: message, email, subject },
+          axiosConfig
+        )
+        .then((res) => {
+          setName("");
+          setEmail("");
+          setMessage("");
+          document.getElementById("form").reset();
+          alert("Message Sent!");
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   };
 
   const inputChange = (input) => {
@@ -43,15 +69,24 @@ function Contact() {
     switch (field) {
       case "name":
         setName(value);
+        if (nameError === "Please Enter a Valid Name") {
+          setNameError("");
+        }
         break;
       case "email":
         setEmail(value);
+        if (emailError === "Please Enter a Valid Email") {
+          setEmailError("");
+        }
         break;
       case "subject":
         setSubject(value);
         break;
       case "message":
         setMessage(value);
+        if (messageError === "Must Contain a Message") {
+          setMessageError("");
+        }
         break;
       default:
         break;
@@ -144,10 +179,16 @@ function Contact() {
           <h3>Take the Next Step Now</h3>
           <div className="input-field">
             <input onChange={inputChange} id="name" placeholder="Name" />
+            {nameError !== "" ? (
+              <span className="error-field">{nameError}</span>
+            ) : null}
             <span className="error-field"></span>
           </div>
           <div className="input-field">
             <input onChange={inputChange} id="email" placeholder="Email" />
+            {emailError !== "" ? (
+              <span className="error-field">{emailError}</span>
+            ) : null}
             <span className="error-field"></span>
           </div>
           <div className="input-field">
@@ -160,7 +201,9 @@ function Contact() {
               id="message"
               placeholder="Message"
             />
-            <span className="error-field"></span>
+            {messageError !== "" ? (
+              <span className="error-field">{messageError}</span>
+            ) : null}
           </div>
           <button>Submit</button>
         </form>
