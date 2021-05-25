@@ -96,6 +96,13 @@
   .portfolio__container__items .project__container {
     width: 55%;
   }
+
+  .portfolio__container__pagination {
+    position: absolute;
+    bottom: -1rem;
+    top: unset;
+    width: 80%;
+  }
 }
 
 @media (max-width: 695px) {
@@ -115,13 +122,9 @@
     width: 80%;
   }
 
-  .portfolio__container__pagination img {
+  /* .portfolio__container__pagination img {
     width: 30px;
     height: 35px;
     border: 1px solid cyan;
-  }
-
-  .portfolio__container__pagination {
-    width: 98%;
-  }
+  } */
 }
