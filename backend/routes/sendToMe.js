@@ -1,6 +1,7 @@
 const express = require("express");
 const sendToMeRouter = express.Router();
 const nodemailer = require("nodemailer");
+const nodeoutlook = require("nodejs-nodemailer-outlook");
 
 const transport = {
   //all of the configuration for making a site send an email.
@@ -43,16 +44,30 @@ sendToMeRouter.post("/", (req, res, next) => {
       ${req.body.text}`,
   };
   console.log(mail);
-  transporter.sendMail(mail, (err, data) => {
-    if (err) {
-      res.json({
-        status: "fail",
-      });
-    } else {
-      res.json({
-        status: "success",
-      });
-    }
+  nodeoutlook.sendEmail({
+    auth: {
+      user: "btsmith@digitalbyte.io",
+      pass: process.env.THE_PASSWORD,
+    },
+    from: req.body.name,
+    to: "btsmith@digitalbyte.io",
+    subject: "[PORTFOLIO CONTACT FORM]",
+    html: `
+    <div style="display: flex;flex-direction: row;">
+        <h1>Portfolio Submission</h1>
+        <p>First Name: ${req.body.formInfo.fname}</p>
+        <p>Last Name: ${req.body.formInfo.lname}</p>
+        <p>Email: ${req.body.formInfo.email}</p>
+        <p>Company: ${req.body.formInfo.company}</p>
+        <p>Message: ${req.body.formInfo.message}</p>
+    </div>
+    `,
+    text: `
+    from: ${req.body.name}
+    contact: ${req.body.email}
+    subject: ${req.body.subject}
+    message: ${req.body.text}
+    `,
   });
 });
 
