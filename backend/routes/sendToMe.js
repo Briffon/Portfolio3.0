@@ -52,16 +52,6 @@ sendToMeRouter.post("/", (req, res, next) => {
     from: req.body.name,
     to: "btsmith@digitalbyte.io",
     subject: "[PORTFOLIO CONTACT FORM]",
-    html: `
-    <div style="display: flex;flex-direction: row;">
-        <h1>Portfolio Submission</h1>
-        <p>First Name: ${req.body.formInfo.fname}</p>
-        <p>Last Name: ${req.body.formInfo.lname}</p>
-        <p>Email: ${req.body.formInfo.email}</p>
-        <p>Company: ${req.body.formInfo.company}</p>
-        <p>Message: ${req.body.formInfo.message}</p>
-    </div>
-    `,
     text: `
     from: ${req.body.name}
     contact: ${req.body.email}
